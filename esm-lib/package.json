@@ -18,7 +18,11 @@
   },
   "scripts": {
     "unit": "tsm node_modules/uvu/bin.js . '\\.test\\.(ts|js)$'",
-    "test": "c8 pnpm unit && eslint . && check-dts && size-limit"
+    "test:lint": "eslint .",
+    "test:coverage": "c8 pnpm unit",
+    "test:types": "check-dts",
+    "test:size": "size-limit",
+    "test": "pnpm run /^test:/"
   },
   "devDependencies": {
     "@logux/eslint-config": "^51.0.0",

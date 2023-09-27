@@ -23,9 +23,8 @@
     "./package.json": "./package.json"
   },
   "scripts": {
-    "unit": "tsm node_modules/uvu/bin.js . '\\.test\\.(ts|js)$'",
     "test:lint": "eslint .",
-    "test:coverage": "c8 pnpm unit",
+    "test:coverage": "c8 pnpm btn",
     "test:types": "check-dts",
     "test:size": "size-limit",
     "test": "pnpm run /^test:/"
@@ -33,6 +32,7 @@
   "devDependencies": {
     "@logux/eslint-config": "^52.0.1",
     "@size-limit/preset-small-lib": "^9.0.0",
+    "better-node-test": "^0.1.1",
     "c8": "^8.0.1",
     "check-dts": "^0.7.2",
     "clean-publish": "^4.2.0",
@@ -46,8 +46,7 @@
     "eslint-plugin-promise": "^6.1.1",
     "size-limit": "^9.0.0",
     "tsm": "^2.3.0",
-    "typescript": "^5.2.2",
-    "uvu": "^0.5.6"
+    "typescript": "^5.2.2"
   },
   "c8": {
     "exclude": [

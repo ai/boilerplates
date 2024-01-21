@@ -24,7 +24,7 @@
   },
   "scripts": {
     "test:lint": "eslint .",
-    "test:coverage": "c8 pnpm btn",
+    "test:coverage": "c8 pnpm bnt",
     "test:types": "check-dts",
     "test:size": "size-limit",
     "test": "pnpm run /^test:/"

@@ -1,9 +1,8 @@
 import loguxTsConfig from '@logux/eslint-config/ts'
 
-/** @type {import('eslint').Linter.FlatConfig[]} */
 export default [
   {
-    ignores: ['**/errors.ts']
+    ignores: ['**/errors.ts', 'coverage']
   },
   ...loguxTsConfig
 ]

@@ -1,14 +1,16 @@
 {
   "compilerOptions": {
-    "target": "es2018",
-    "module": "esnext",
-    "moduleResolution": "node",
+    "target": "es2022",
+    "module": "preserve",
+    "skipLibCheck": true,
+    "moduleResolution": "NodeNext",
     "esModuleInterop": true,
+    "isolatedModules": true,
     "allowJs": true,
     "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
     "noEmit": true
   },
-  "exclude": [
-    "**/errors.ts"
-  ]
+  "exclude": ["**/errors.ts"]
 }

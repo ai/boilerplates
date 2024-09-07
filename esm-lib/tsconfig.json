@@ -3,7 +3,7 @@
     "target": "es2022",
     "module": "preserve",
     "skipLibCheck": true,
-    "moduleResolution": "NodeNext",
+    "moduleResolution": "node",
     "esModuleInterop": true,
     "isolatedModules": true,
     "allowJs": true,

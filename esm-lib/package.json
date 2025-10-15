@@ -24,7 +24,7 @@
   },
   "scripts": {
     "test:lint": "eslint .",
-    "test:coverage": "c8 pnpm bnt",
+    "test:coverage": "pnpm bnt --coverage 100",
     "test:types": "check-dts",
     "test:size": "size-limit",
     "test": "pnpm run /^test:/"
@@ -38,20 +38,6 @@
     "eslint": "^9.37.0",
     "size-limit": "^11.2.0",
     "typescript": "^5.9.3"
-  },
-  "c8": {
-    "exclude": [
-      "**/*.test.*",
-      "test/*"
-    ],
-    "lines": 100,
-    "check-coverage": true,
-    "reporter": [
-      "text",
-      "lcov"
-    ],
-    "skip-full": true,
-    "clean": true
   },
   "size-limit": [
     {

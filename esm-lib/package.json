@@ -3,13 +3,9 @@
   "version": "0.0.0",
   "description": "",
   "keywords": [],
-  "author": "Andrey Sitnik <andrey@sitnik.es>",
   "license": "MIT",
+  "author": "Andrey Sitnik <andrey@sitnik.es>",
   "repository": "ai/NAME",
-  "sideEffects": false,
-  "engines": {
-    "node": "^22.0.0 || >=24.0.0"
-  },
   "funding": [
     {
       "type": "github",
@@ -17,29 +13,32 @@
     }
   ],
   "type": "module",
+  "sideEffects": false,
   "types": "./index.d.ts",
   "exports": {
     ".": "./index.js",
     "./package.json": "./package.json"
   },
   "scripts": {
-    "test:lint": "eslint .",
+    "test:lint": "oxlint",
     "test:coverage": "pnpm bnt --coverage 100",
     "test:types": "check-dts",
     "test:size": "size-limit",
     "test": "pnpm run /^test:/"
   },
   "devDependencies": {
-    "@logux/eslint-config": "^56.1.0",
-    "@size-limit/preset-small-lib": "^11.2.0",
-    "actions-up": "^1.4.1",
-    "better-node-test": "^0.8.1",
-    "check-dts": "^0.9.0",
-    "clean-publish": "^5.2.2",
-    "eslint": "^9.37.0",
+    "@logux/oxc-configs": "^0.2.0",
+    "@size-limit/preset-small-lib": "^12.0.1",
+    "actions-up": "^1.12.0",
+    "better-node-test": "^0.8.4",
+    "check-dts": "^1.0.0",
+    "clean-publish": "^6.0.4",
     "multiocular": "^0.8.1",
-    "size-limit": "^11.2.0",
-    "typescript": "^5.9.3"
+    "oxfmt": "^0.42.0",
+    "oxlint": "^1.57.0",
+    "oxlint-tsgolint": "^0.18.1",
+    "size-limit": "^12.0.1",
+    "typescript": "^6.0.2"
   },
   "size-limit": [
     {
@@ -47,13 +46,8 @@
       "limit": "0 B"
     }
   ],
-  "prettier": {
-    "arrowParens": "avoid",
-    "jsxSingleQuote": false,
-    "quoteProps": "consistent",
-    "semi": false,
-    "singleQuote": true,
-    "trailingComma": "none"
+  "engines": {
+    "node": "^22.0.0 || >=24.0.0"
   },
   "clean-publish": {
     "cleanDocs": true

@@ -12,13 +12,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout the repository
-        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+        with:
+          persist-credentials: false
       - name: Install Node.js & pnpm
         uses: pnpm/setup@5d160c5bc68a09337ad0d5654e237e03253b5879 # v1.0.0
         with:
           version: 11
           runtime: node@26
-          cache: pnpm
       - name: Install dependencies
         run: pnpm ci
       - name: Run tests
@@ -27,13 +28,15 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version:
+        node:
           - 24
           - 22
     name: Node.js ${{ matrix.node }} Quick
     steps:
       - name: Checkout the repository
-        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+        with:
+          persist-credentials: false
       - name: Install Node.js & pnpm
         uses: pnpm/setup@5d160c5bc68a09337ad0d5654e237e03253b5879 # v1.0.0
         with:

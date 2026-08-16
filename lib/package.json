@@ -27,15 +27,15 @@
     "test": "pnpm run /^test:/"
   },
   "devDependencies": {
-    "@logux/oxc-configs": "^0.4.1",
-    "@size-limit/preset-small-lib": "^12.1.0",
-    "better-node-test": "^0.8.4",
-    "check-dts": "^2.0.0",
+    "@logux/oxc-configs": "^1.1.0",
+    "@size-limit/preset-small-lib": "^13.0.3",
+    "better-node-test": "^1.0.0",
+    "check-dts": "^2.0.1",
     "multiocular": "^0.8.4",
-    "oxfmt": "^0.59.0",
-    "oxlint": "^1.74.0",
+    "oxfmt": "^0.63.0",
+    "oxlint": "^1.78.0",
     "oxlint-tsgolint": "^7.0.2001",
-    "size-limit": "^12.1.0",
+    "size-limit": "^13.0.3",
     "typescript": "^7.0.2"
   },
   "size-limit": [
